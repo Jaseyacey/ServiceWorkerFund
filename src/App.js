@@ -5,12 +5,13 @@ import {
     Switch,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import AboutPage from ',.pages/AboutPage';
-import DonatePage from './pages/donatePage';
-import NotFoundPage from './pages/NotfoundPage';
+import AboutPage from './pages/AboutPage';
+import DonatePage from './pages/DonatePage';
+import NotFoundPage from './pages/NotFoundPage';
 import NavBar from './NavBar';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+    
 class App extends Component {
     render() {
         return (
@@ -32,4 +33,4 @@ class App extends Component {
     }
 }
 
-export default App; 
+export default App;
