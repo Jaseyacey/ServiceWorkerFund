@@ -17,6 +17,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: larger;
   padding-top: 30;
+  background-color: black;
 }
 
 .App-link {
@@ -31,3 +32,8 @@
     transform: rotate(360deg);
   }
 }
+.homeBody {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: blue;
+}
+

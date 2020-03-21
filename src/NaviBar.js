@@ -8,13 +8,16 @@ const NavBar = () => (
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/AboutPage">About Page</Link>
+                <Link to="/AboutPage">About Us</Link>
             </li>
             <li>
-                <Link to="/DonatePage">Donate Page</Link>
+                <Link to="/DonatePage">Donation Page</Link>
+            </li>
+            <li>
+                <Link to="PaymentPage">Payment Page</Link>
             </li>
         </ul>
     </nav>
 );
 
-export default NavBar;  
+export default NavBar;

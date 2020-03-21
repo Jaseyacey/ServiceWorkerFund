@@ -7,8 +7,8 @@ import {
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DonatePage from './pages/DonatePage';
-import NotFoundPage from './pages/NotFoundPage';
-import NavBar from './NavBar';
+import NotFoundPage from './pages/HomePage2';
+import NaviBar from './NaviBar';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
     
@@ -17,13 +17,13 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <NavBar />
+                    <NaviBar />
                     <div id="page-body">
                         <Switch>
                             <Route path="/" component={HomePage} exact>
                             <Route path="/about" component={AboutPage} exact></Route>    
                             <Route path="/DonatePage" component={DonatePage} exact></Route>
-                            <Route component={NotFoundPage} />
+                            <Route component={NotFoundPage} exact/>
                             </Route>
                         </Switch>
                     </div>
