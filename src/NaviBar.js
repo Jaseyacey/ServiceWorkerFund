@@ -1,26 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 const NavBar = () => (
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/AboutPage">About Us</Link>
-            </li>
-            <li>
-                <Link to="/DonatePage">Donation Page</Link>
-            </li>
-            <li>
-                <Link to="/PaymentPage">Payment Page</Link>
-            </li>
-            <li>
-                <Link to="/ContactMe">Contact Page</Link>
-            </li>
-        </ul>
-    </nav>
+    <Navbar bg="primary" variant="dark">
+    <Navbar.Brand href="/">S.I.W.F</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="/AboutPage">About Page</Nav.Link>
+      <Nav.Link href="/DonatePage">Donations</Nav.Link>
+      <Nav.Link href="/PaymentPage">Application Page</Nav.Link>
+      <Nav.Link href="/ContactMe">Contact Me</Nav.Link>
+    </Nav>
+
+  </Navbar>
 );
 
 export default NavBar;
