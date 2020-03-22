@@ -2,38 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ulHeader {
+  font-weight: bold;
+}
+.headerAbout {
+  font-size: 75px;
+  font-family: cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.aboutBody {
+  text-align: left;
 }
-
-.headerHome {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: larger;
-  padding-top: 30;
-  background-color: black;
+.aboutBodyHeader {
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.homeBody {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: blue;
-}
-

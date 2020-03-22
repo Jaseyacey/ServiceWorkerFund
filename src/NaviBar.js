@@ -9,6 +9,7 @@ const NavBar = () => (
       <Nav.Link href="/AboutPage">About Page</Nav.Link>
       <Nav.Link href="/DonatePage">Donations</Nav.Link>
       <Nav.Link href="/PaymentPage">Application Page</Nav.Link>
+      <Nav.Link href="/tandc">Terms and Conditions Page</Nav.Link>
       <Nav.Link href="/ContactMe">Contact Me</Nav.Link>
     </Nav>
 

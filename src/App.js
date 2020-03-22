@@ -10,10 +10,11 @@ import DonatePage from './pages/DonatePage';
 import HomePage2 from './pages/HomePage2';
 import PaymentPage from './pages/PaymentPage';
 import ContactMe from './pages/ContactMe';
+import tandc from './pages/tandc';
 import NaviBar from './NaviBar';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-    
+import './App.css'
+
 class App extends Component {
     render() {
         return (
@@ -26,6 +27,7 @@ class App extends Component {
                             <Route path="/AboutPage" component={AboutPage} exact />    
                             <Route path="/DonatePage" component={DonatePage} exact />
                             <Route path="/PaymentPage" component={PaymentPage} exact />
+                            <Route Path="/tandc" component={tandc} exact />
                             <Route path="/ContactMe" component={ContactMe} exact />
                             <Route component={HomePage2} exact />
                         </Switch>
