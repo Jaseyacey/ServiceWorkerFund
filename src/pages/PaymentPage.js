@@ -2,7 +2,7 @@ import React from 'react';
 
 const PaymentPage = () => (
     <>
-        <h1>PaymentPage</h1>
+        <h1>Payment Page</h1>
     </>
 );
 

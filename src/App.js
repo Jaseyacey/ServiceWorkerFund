@@ -7,7 +7,9 @@ import {
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DonatePage from './pages/DonatePage';
-import NotFoundPage from './pages/HomePage2';
+import HomePage2 from './pages/HomePage2';
+import PaymentPage from './pages/PaymentPage';
+import ContactMe from './pages/ContactMe';
 import NaviBar from './NaviBar';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,11 +22,12 @@ class App extends Component {
                     <NaviBar />
                     <div id="page-body">
                         <Switch>
-                            <Route path="/" component={HomePage} exact>
-                            <Route path="/about" component={AboutPage} exact></Route>    
-                            <Route path="/DonatePage" component={DonatePage} exact></Route>
-                            <Route component={NotFoundPage} exact/>
-                            </Route>
+                            <Route path="/" component={HomePage} exact  />
+                            <Route path="/AboutPage" component={AboutPage} exact />    
+                            <Route path="/DonatePage" component={DonatePage} exact />
+                            <Route path="/PaymentPage" component={PaymentPage} exact />
+                            <Route path="/ContactMe" component={ContactMe} exact />
+                            <Route component={HomePage2} exact />
                         </Switch>
                     </div>
                 </div>
@@ -32,5 +35,4 @@ class App extends Component {
         )
     }
 }
-
 export default App;

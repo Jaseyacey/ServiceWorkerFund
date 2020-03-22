@@ -14,7 +14,10 @@ const NavBar = () => (
                 <Link to="/DonatePage">Donation Page</Link>
             </li>
             <li>
-                <Link to="PaymentPage">Payment Page</Link>
+                <Link to="/PaymentPage">Payment Page</Link>
+            </li>
+            <li>
+                <Link to="/ContactMe">Contact Page</Link>
             </li>
         </ul>
     </nav>
