@@ -23,7 +23,7 @@ const AboutPage = () => (
         There are many ways in which the Government is helping, for example they are paying 80% of their salaries up to £2500. 
         Which is why I have decided to try and help top their wages up by 20% with this site.
       </h6>
-      <h1>How></h1>
+      <h1>How</h1>
     </Col>
     <Col></Col>
   </Row>
