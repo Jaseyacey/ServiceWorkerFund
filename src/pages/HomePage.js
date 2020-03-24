@@ -31,7 +31,7 @@ const HomePage = () => (
                 <p>Service industry workers apply through the <a href="./pages/PaymentPage">Application Page</a></p>
             </ListGroup.Item>
             <ListGroup.Item as="li">
-                <p>We analyse each case and donate 20% of their monthly earnings, this is established by them submitting their monthly payslips.</p>
+                <p>We analyse each case and donate 20% of their monthly earnings, this is estab lished by them submitting their monthly payslips.</p>
             </ListGroup.Item>
             <ListGroup.Item as="li">
                 <p>Each case is dealt with on its merit.</p>
