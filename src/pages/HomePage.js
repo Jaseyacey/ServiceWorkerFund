@@ -4,11 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup'
-import '../App.css';
-// import Navibar from '../NaviBar';
+import '../App.css'
+import Navbar from '../Navbar'
 
 const HomePage = () => (
     <>
+    
     <Jumbotron fluid>
         <h1>ServiceFund for service industry workers</h1>
         <h6>A site for those service industry workers dealing with lost income from COVID-19</h6>

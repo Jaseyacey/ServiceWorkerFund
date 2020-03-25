@@ -7,10 +7,11 @@ const NavBar = () => (
     <Navbar.Brand href="/">S.I.W.F</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="/AboutPage">About Page</Nav.Link>
+      <Nav.Link href="/RegisterPage">Registration Page</Nav.Link>
       <Nav.Link href="/DonatePage">Donations</Nav.Link>
       <Nav.Link href="/PaymentPage">Application</Nav.Link>
       <Nav.Link href="/tandc">Terms and Conditions</Nav.Link>
-      <Nav.Link href="/ContactMe">Contact Me</Nav.Link>
+      <Nav.Link href="/ContactMePage">Contact Me</Nav.Link>
     </Nav>
 
   </Navbar>

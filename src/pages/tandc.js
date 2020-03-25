@@ -16,7 +16,7 @@ const tandc = () => (
         <Col>1 of 3</Col>
         <Col xs={6}>
             <h1>
-                What terms you looking for?
+                Terms
             </h1>
         </Col>
         <Col>3 of 3</Col>
