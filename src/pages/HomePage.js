@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup'
 import '../App.css';
+// import Navibar from '../NaviBar';
 
 const HomePage = () => (
     <>

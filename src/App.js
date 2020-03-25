@@ -10,11 +10,14 @@ import HomePage2 from './pages/HomePage2';
 import PaymentPage from './pages/PaymentPage';
 import ContactMe from './pages/ContactMe';
 import tandc from './pages/tandc';
-import NaviBar from './NaviBar';
+import Navibar from './NaviBar';
+import './App.css'
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
   return (
+    <>
+    <Navibar />
     <Switch>
       <ProtectedRoute
         exact
@@ -23,6 +26,7 @@ function App(props) {
         isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
       />
+      
       <Route path="/login" component={Login} /> 
       <Route path="/" component={HomePage} exact  />
       <Route path="/AboutPage" component={AboutPage} exact />    
@@ -32,7 +36,7 @@ function App(props) {
       <Route path="/ContactMe" component={ContactMe} exact />
       <Route component={HomePage2} exact />
     </Switch>
-
+</>
   );
 }
 
