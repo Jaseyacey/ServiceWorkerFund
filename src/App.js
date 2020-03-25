@@ -35,8 +35,8 @@ function App(props) {
       <Route path="/DonatePage" component={DonatePage} exact />
       <Route path="/PaymentPage" component={PaymentPage} exact />
       <Route path="/RegisterPage" component={RegisterPage} exact />
-      <Route Path="/tandc" component={tandc} exact />
       <Route path="/ContactMePage" component={ContactMePage} exact />
+      <Route Path="/tandc" component={tandc} exact />
       <Route component={HomePage2} exact />
     </Switch>
 </>

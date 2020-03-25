@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup'
-import '../App.css'
+import '../App.css';
 import Navbar from '../Navbar'
 
 const HomePage = () => (
@@ -17,7 +17,7 @@ const HomePage = () => (
     <Container>
     <Row class="homeBody">  
     <Col />
-    <Col xs={6} className="covidHeader">
+    <Col xs={6} className="covidHeader"> 
         <h4>Lets help the poor folks who have lost their jobs due to COVID-19</h4>
         <Container fluid>
   <Row>

@@ -27,7 +27,7 @@ const AboutPage = () => (
     </Col>
     <Col></Col>
   </Row>
-  
+
 </Container>
     </>
 )

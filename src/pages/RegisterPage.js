@@ -5,18 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
 const RegisterPage = () => (
-    <>
-    <Container>
-        <Row>
-            <Col>
-            <Jumbotron flair>
-            <h1>Register please</h1>
-            </Jumbotron>
-            </Col>
-        </Row>
-    </Container>
-    
-    </>
+    <Jumbotron fluid>
+            <h1>Registration Page</h1>
+    </Jumbotron>
 );
 
 export default RegisterPage;

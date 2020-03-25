@@ -5,24 +5,10 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 const tandc = () => (
-<>
-    <Container>
-        <Jumbotron flair>
-            <h1>Terms & Conditions</h1>
-        </Jumbotron>
-    </Container>
-    <Container>
-    <Row>
-        <Col>1 of 3</Col>
-        <Col xs={6}>
-            <h1>
-                Terms
-            </h1>
-        </Col>
-        <Col>3 of 3</Col>
-    </Row>
-    </Container>
-    </>
+    <Jumbotron fluid>
+
+            <h1>Terms and Conditions</h1>
+    </Jumbotron>
 )
 
 export default tandc;
