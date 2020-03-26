@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
     Route,
@@ -23,8 +23,8 @@ class App extends Component {
                     <NaviBar />
                     <div id="page-body">
                         <Switch>
-                            <Route path="/" component={HomePage} exact  />
-                            <Route path="/AboutPage" component={AboutPage} exact />    
+                            <Route path="/" component={HomePage} exact />
+                            <Route path="/AboutPage" component={AboutPage} exact />
                             <Route path="/DonatePage" component={DonatePage} exact />
                             <Route path="/PaymentPage" component={PaymentPage} exact />
                             <Route Path="/tandc" component={tandc} exact />
