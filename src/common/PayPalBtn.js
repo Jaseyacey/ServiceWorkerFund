@@ -31,7 +31,6 @@ const PayPalButton = props => {
             },
             onApprove: async (data, actions) => {
                 return actions.order.capture().then(details => {
-                    console.log(details);
                     setPaymentComplete(true);
                     setPaymentData(details);
                 })
@@ -54,7 +53,7 @@ const PayPalButton = props => {
 
     useEffect(() => {
         if (Object.keys(paymentData).length !== 0) {
-            document.getElementById('dataOutputSample').innerHTML = JSON.stringify(paymentData, null, 4);
+            document.getElementById("payerName").innerHTML = `${paymentData.payer.name.given_name}!`;
         }
     }, [paymentData]);
 
@@ -64,7 +63,7 @@ const PayPalButton = props => {
             <>
                 <Row className="justify-content-center mt-3" xs={12} sm={12} md="auto" lg="auto" xl="auto">
                     <Col>
-                        <h6>Thank you for your donation!</h6>
+                        <h6>Thank you for your donation <span id="payerName"></span></h6>
                         <p>--Additional thank you message needed--</p>
                         <p id="dataOutputSample"></p>
 
@@ -78,12 +77,11 @@ const PayPalButton = props => {
             </>
         )
     }
-    //CHECK FOR paymentData!!!!!!!!!!!
 
     return (
         <>
             <div id="paypal-button-container" style={{ width: '250px', marginLeft: 'auto', marginRight: 'auto' }}></div>
-            {paymentComplete ? <ThankYou /> : console.log("NOTCLEAR:::")}
+            {paymentComplete ? <ThankYou /> : null}
             <div id="paypal-err"></div>
         </>
     )
