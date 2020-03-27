@@ -12,6 +12,8 @@ import ContactMePage from './pages/ContactMePage';
 import tandc from './pages/tandc';
 import RegisterPage from './pages/RegisterPage'; 
 import Navbar from './Navbar'
+import { AuthProvider } from "./Components/AuthProvider";
+import PrivateRoute from "../src/Components/PrivateRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -21,7 +23,13 @@ function App(props) {
     <>
     <Navbar />
     <Switch>
-      
+    <AuthProvider>
+        <div>
+          <PrivateRoute exact path="/" component={HomePage} />
+          
+          <Route exact path="/RegisterPage" component={RegisterPage} />
+        </div>
+    </AuthProvider>
       <ProtectedRoute
         exact
         path="/"
