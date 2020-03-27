@@ -4,6 +4,7 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
+// import axios from "axios";
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DonatePage from './pages/DonatePage';
@@ -26,9 +27,9 @@ class App extends Component {
                             <Route path="/" component={HomePage} exact  />
                             <Route path="/AboutPage" component={AboutPage} exact />    
                             <Route path="/DonatePage" component={DonatePage} exact />
+                            <Route path="/ContactMe" component={ContactMe} exact />
                             <Route path="/PaymentPage" component={PaymentPage} exact />
                             <Route Path="/tandc" component={tandc} exact />
-                            <Route path="/ContactMe" component={ContactMe} exact />
                             <Route component={HomePage2} exact />
                         </Switch>
                     </div>

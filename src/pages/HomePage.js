@@ -25,12 +25,12 @@ const HomePage = () => (
         <h3>Money donation process:</h3>
         <ListGroup>
             <ListGroup.Item as="li">
-                <p>Donations are recieved through PayPal on the <a href="./pages/DonatePage">Donation Page</a></p>
+                <p>Donations are recieved through PayPal on the <a href="./Pages/DonatePage">Donation Page</a></p>
             </ListGroup.Item>
             <ListGroup.Item as="li">
                 <p>Service industry workers apply through the <a href="./pages/PaymentPage">Application Page</a></p>
             </ListGroup.Item>
-            <ListGroup.Item as="li">
+            <ListGroup.Item as="li"> 
                 <p>We analyse each case and donate 20% of their monthly earnings, this is established by them submitting their monthly payslips.</p>
             </ListGroup.Item>
             <ListGroup.Item as="li">

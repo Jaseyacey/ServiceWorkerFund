@@ -40,7 +40,7 @@ const DonatePage = () => {
             finalAmount = amountArr[0];
         }
 
-        if (amountSubmitted.indexOf('-') !== -1) {
+        if (amountSubmitted.indexOf('-') !== -1) {  
             console.log("Negative!!");
             finalAmount = amountSubmitted.replace('-', '');
         }
