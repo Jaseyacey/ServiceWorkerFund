@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
-import PayPalBtn from '../common/PayPalBtn'
+import PayPalBtn from '../common/PayPalBtn';
 
 
 const DonatePage = () => {
