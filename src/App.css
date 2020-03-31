@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.ulHeader {
+  font-weight: bold;
+}
+.headerAbout {
+  font-size: 75px;
+}
+
+.aboutBody {
+  text-align: left;
+}
+.aboutBodyHeader {
+  text-align: center;
+}
+.contactMeForm {
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+}
