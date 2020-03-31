@@ -3,14 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+// import * as firebase from 'firebase';
 
 const AboutPage = () => (
     <>
 <Container fluid className = " headerAbout ">
   <Jumbotron flair>
-    
       <h1>About Us</h1>
-    
   </Jumbotron>
 </Container>
 <Container className= " aboutBodyHeader ">
@@ -43,5 +42,4 @@ const AboutPage = () => (
 </Container>
     </>
 )
-
 export default AboutPage; 

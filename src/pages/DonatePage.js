@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
@@ -6,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
-import PayPalBtn from '../common/PayPalBtn';
+import PayPalBtn from '../common/PayPalBtn'
 
 
 const DonatePage = () => {
@@ -20,7 +19,6 @@ const DonatePage = () => {
     }
     /**
     <Button className="button" value="continue" onClick={this.saveAndContinue}> Continue </Button>
-
   saveAndContinue = (e) => {
        e.preventDefault();
        console.log(e.target.value); //will give you the value continue
@@ -40,7 +38,7 @@ const DonatePage = () => {
             finalAmount = amountArr[0];
         }
 
-        if (amountSubmitted.indexOf('-') !== -1) {  
+        if (amountSubmitted.indexOf('-') !== -1) {
             console.log("Negative!!");
             finalAmount = amountSubmitted.replace('-', '');
         }
@@ -63,7 +61,11 @@ const DonatePage = () => {
             <Container fluid>
                 <Jumbotron fluid>
 
-                    <h1>Donation Page</h1>
+                    <h1>Donate Page</h1>
+                    <p>
+                        This is a modified jumbotron that occupies the entire horizontal space of
+                        its parent.
+            </p>
                 </Jumbotron>
             </Container>
 
@@ -73,7 +75,7 @@ const DonatePage = () => {
                     <>
                         <Row className="justify-content-center mt-5" xs={12} sm={12} md="auto" lg="auto" xl="auto">
                             <Col>
-                                <h3>Donation amount: £{amount}</h3>
+                                <h3>Donation amount: ${amount}</h3>
                             </Col>
                         </Row>
                         <Row className="justify-content-center mt-5" xs={12} sm={12} md="auto" lg="auto" xl="auto">
@@ -90,14 +92,14 @@ const DonatePage = () => {
                             <h3>Please choose a donation amount:</h3>
                             <Row className="justify-content-center mt-5" xs={12} sm={12} md="auto" lg="auto" xl="auto">
                                 <Col>
-                                    <Button variant="outline-primary" value="1" type="button" id="oneBtn" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>£1</Button>
-                                    <Button variant="outline-primary" value="5" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>£5</Button>
+                                    <Button variant="outline-primary" value="1" type="button" id="oneBtn" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>$1</Button>
+                                    <Button variant="outline-primary" value="5" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>$5</Button>
                                 </Col>
                             </Row>
                             <Row className="justify-content-center" xs={12} sm={12} md="auto" lg="auto" xl="auto">
                                 <Col>
-                                    <Button variant="outline-primary" value="10" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>£10</Button>
-                                    <Button variant="outline-primary" value="100" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>£100</Button>
+                                    <Button variant="outline-primary" value="10" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>$10</Button>
+                                    <Button variant="outline-primary" value="100" type="button" size="lg" style={{ width: styles.width, margin: styles.margin }} onClick={setAmountHandler}>$100</Button>
                                 </Col>
                             </Row>
                             <Row className="justify-content-center mt-3" xs={12} sm={12} md="auto" lg="auto" xl="auto">
