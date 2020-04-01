@@ -4,7 +4,6 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
-// import axios from "axios";
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DonatePage from './pages/DonatePage';

@@ -4,6 +4,7 @@
 
 .ulHeader {
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 .headerAbout {
   font-size: 75px;
@@ -13,6 +14,10 @@
   text-align: left;
 }
 .aboutBodyHeader {
+  text-align: left;
+  font-family: 'Dosis', sans-serif;
+}
+.aboutPageh {
   text-align: center;
 }
 .contactMeForm {

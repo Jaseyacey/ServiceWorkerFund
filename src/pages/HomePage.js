@@ -5,18 +5,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup'
 import '../App.css';
-import * as firebase from 'firebase';
+// import * as firebase from 'firebase';
 
 const HomePage = () => (
     <>
-    <Jumbotron fluid>
+    <Jumbotron fluid className="jumbotron">
         <h1>ServiceFund for service industry workers</h1>
         <h6>A site for those service industry workers dealing with lost income from COVID-19</h6>
     </Jumbotron>
     <Container>
     <Row class="homeBody">  
     <Col />
-    <Col xs={6} className="covidHeader">
+    <Col xs={8} className="covidHeader">
         <h4>Lets help the poor folks who have lost their jobs due to COVID-19</h4>
         <Container fluid>
   <Row>
