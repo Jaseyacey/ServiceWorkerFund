@@ -1,48 +1,151 @@
-import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container'; 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup'
-import '../App.css';
-// import * as firebase from 'firebase';
+import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
+// nodejs library to set properties for components
+import PropTypes from "prop-types";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
+import Hidden from "@material-ui/core/Hidden";
+import Drawer from "@material-ui/core/Drawer";
+// @material-ui/icons
+// import Menu from "@material-ui/icons/Menu";
+// core components
+import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
-const HomePage = () => (
-    <>
-    <Jumbotron fluid className="jumbotron">
-        <h1>ServiceFund for service industry workers</h1>
-        <h6>A site for those service industry workers dealing with lost income from COVID-19</h6>
-    </Jumbotron>
-    <Container>
-    <Row class="homeBody">  
-    <Col />
-    <Col xs={8} className="covidHeader">
-        <h4>Lets help the poor folks who have lost their jobs due to COVID-19</h4>
-        <Container fluid>
-  <Row>
-    <Col></Col>
-  </Row>
-</Container>
-        <h3>Money donation process:</h3>
-        <ListGroup>
-            <ListGroup.Item as="li">
-                <p>Donations are recieved through PayPal on the <a href="./Pages/DonatePage">Donation Page</a></p>
-            </ListGroup.Item>
-            <ListGroup.Item as="li">
-                <p>Service industry workers apply through the <a href="./pages/PaymentPage">Application Page</a></p>
-            </ListGroup.Item>
-            <ListGroup.Item as="li"> 
-                <p>We analyse each case and donate 20% of their monthly earnings, this is established by them submitting their monthly payslips.</p>
-            </ListGroup.Item>
-            <ListGroup.Item as="li">
-                <p>Each case is dealt with on its merit.</p>
-            </ListGroup.Item>
-        </ListGroup>    
-    </Col>
-    <Col></Col>
-  </Row>
-    </Container>
-    </>
-);  
+const useStyles = makeStyles(styles);
 
-export default HomePage;
+export default function Header(props) {
+  const classes = useStyles();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  React.useEffect(() => {
+    if (props.changeColorOnScroll) {
+      window.addEventListener("scroll", headerColorChange);
+    }
+    return function cleanup() {
+      if (props.changeColorOnScroll) {
+        window.removeEventListener("scroll", headerColorChange);
+      }
+    };
+  });
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+  const headerColorChange = () => {
+    const { color, changeColorOnScroll } = props;
+    const windowsScrollTop = window.pageYOffset;
+    if (windowsScrollTop > changeColorOnScroll.height) {
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.remove(classes[color]);
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.add(classes[changeColorOnScroll.color]);
+    } else {
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.add(classes[color]);
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.remove(classes[changeColorOnScroll.color]);
+    }
+  };
+  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
+  const appBarClasses = classNames({
+    [classes.appBar]: true,
+    [classes[color]]: color,
+    [classes.absolute]: absolute,
+    [classes.fixed]: fixed
+  });
+  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  return (
+    <AppBar className={appBarClasses}>
+      <Toolbar className={classes.container}>
+        {leftLinks !== undefined ? brandComponent : null}
+        <div className={classes.flex}>
+          {leftLinks !== undefined ? (
+            <Hidden smDown implementation="css">
+              {leftLinks}
+            </Hidden>
+          ) : (
+            brandComponent
+          )}
+        </div>
+        <Hidden smDown implementation="css">
+          {rightLinks}
+        </Hidden>
+        <Hidden mdUp>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerToggle}
+          >
+            {/* <Menu /> */}
+          </IconButton>
+        </Hidden>
+      </Toolbar>
+      <Hidden mdUp implementation="js">
+        <Drawer
+          variant="temporary"
+          anchor={"right"}
+          open={mobileOpen}
+          classes={{
+            paper: classes.drawerPaper
+          }}
+          onClose={handleDrawerToggle}
+        >
+          <div className={classes.appResponsive}>
+            {leftLinks}
+            {rightLinks}
+          </div>
+        </Drawer>
+      </Hidden>
+    </AppBar>
+  );
+}
+
+Header.defaultProp = {
+  color: "white"
+};
+
+Header.propTypes = {
+  color: PropTypes.oneOf([
+    "primary",
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "transparent",
+    "white",
+    "rose",
+    "dark"
+  ]),
+  rightLinks: PropTypes.node,
+  leftLinks: PropTypes.node,
+  brand: PropTypes.string,
+  fixed: PropTypes.bool,
+  absolute: PropTypes.bool,
+  // this will cause the sidebar to change the color from
+  // props.color (see above) to changeColorOnScroll.color
+  // when the window.pageYOffset is heigher or equal to
+  // changeColorOnScroll.height and then when it is smaller than
+  // changeColorOnScroll.height change it back to
+  // props.color (see above)
+  changeColorOnScroll: PropTypes.shape({
+    height: PropTypes.number.isRequired,
+    color: PropTypes.oneOf([
+      "primary",
+      "info",
+      "success",
+      "warning",
+      "danger",
+      "transparent",
+      "white",
+      "rose",
+      "dark"
+    ]).isRequired
+  })
+};
